@@ -1,0 +1,30 @@
+1- create a docker file
+2-add required info as per link
+3- Docker build 
+
+docker build -t custom_nginx .
+
+custom_nginx is the image name
+
+4 - once the image is created  , run the container
+
+docker run -d --name uday_custom_nginx -p 8080:80 custom_nginx
+
+5 - To push 
+
+docker login
+
+then create tag
+docker tag custom_nginx ukiran562/custom_nginx
+
+then 
+
+docker push ukiran562/custom_nginx
+
+6 - To go into the container
+
+docker exec -it f928db84454f /bin/bash
+
+fxxx is container_id
+
+/bin/bash represent the type of shell you want to go in
